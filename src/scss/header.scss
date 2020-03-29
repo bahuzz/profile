@@ -1,0 +1,24 @@
+.header {
+	min-height: 80px;
+}
+
+.topmenu {
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	min-height: 80px;
+	a {
+		color: $menu-color;
+	}
+	&__item {
+		padding-left: 36px;
+		padding-right: 36px;
+		font-size: 14px;
+		font-family: 'robotolight';
+		&--current {
+			a {
+				color: $menu-color-active;
+			}
+		}
+	}
+}

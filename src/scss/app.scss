@@ -1,13 +1,13 @@
-.test {
-    color: red;
-}
-h1 {
-    text-transform: uppercase;
-    color: green;
-}
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-}
+@import "vars";
+@import "reset";
+@import "fonts";
+@import "icons";
+
+
+@import "layout";
+@import "header";
+@import "home";
+@import "forms";
+@import "select";
+@import "perfect-scrollbar";
+@import "nouislider";

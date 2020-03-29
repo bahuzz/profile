@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document 123123</title>
+    <title>Webmasters</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     <header class="header">
-        <nav>
-            <ul class="topmenu">
-                <li><a href="#">Личная информация</a></li>
-                <li><a href="#">Опыт</a></li>
-                <li><a href="#">Javascript</a></li>
-                <li><a href="#">О себе</a></li>   
-            </ul>
-        </nav>
+        <div class="container">
+        	<nav>
+	            <ul class="topmenu">
+	                <li class="topmenu__item topmenu__item--current"><a href="#">Личная информация</a></li>
+	                <li class="topmenu__item"><a href="#">Опыт</a></li>
+	                <li class="topmenu__item"><a href="#">Javascript</a></li>
+	                <li class="topmenu__item"><a href="#">О себе</a></li>   
+	            </ul>
+	        </nav>
+        </div>
     </header>
 
     <section class="hero">
-        <h1 class="h1">Анкета</h1>
+        <h1 class="h1 hero__title">Анкета</h1>
     </section>
 
     <div class="container">
         <section class="section">
-            <i class="section__icon"></i>
-            <h2 class="h2 section__title">Личная информация</h2>
-            <div class="section__content">
+            <div class="section__top">
+                <i class="icon-info section__icon"></i>
+                <h2 class="h2 section__title">Личная информация</h2>
+            </div>
+            
+            <div class="section__content form-wrapper">
                 <div class="form-row">
                     <input 
                         type="text" 
@@ -35,12 +40,27 @@
                 </div>
 
                 <div class="form-row">
-                    <select>
-                        <option value="1">1999</option>
-                        <option value="1">1999</option>
-                        <option value="1">1999</option>
-                        <option value="1">1999</option>
-                    </select>
+                    <div class="custom-select">
+                        <select>
+                            <option value="0">Год рождения</option>
+                            <option value="1">1998</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                            <option value="1">1999</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="form-row">
@@ -67,16 +87,18 @@
         </section>
     
         <section class="section">
-            <i class="section__icon"></i>
-            <h2 class="h2 section__title">Расскажите о своем опыте</h2>
+            <div class="section__top">
+                <i class="icon-experience section__icon"></i>
+                <h2 class="h2 section__title">Расскажите о своем опыте</h2>
+            </div>
             <div class="section__content">
-                <div class="flex">
-                    <div class="col">
+                <div class="checks">
+                    <div class="checks__col">
                         <label class="check">
                             <input 
                                 type="checkbox"
                                 class="check__input"
-                                > Stylus/LESS/SASS
+                                > БЭМ/OOCSS
                             <span class="check__mark"></span>
                         </label>
 
@@ -92,7 +114,59 @@
                             <input 
                                 type="checkbox"
                                 class="check__input"
-                                > Stylus/LESS/SASS
+                                > Работаю с SVG
+                            <span class="check__mark"></span>
+                        </label>
+                    </div>
+
+                    <div class="checks__col">
+                        <label class="check">
+                            <input 
+                                type="checkbox"
+                                class="check__input"
+                                > Верстаю семантично
+                            <span class="check__mark"></span>
+                        </label>
+
+                        <label class="check">
+                            <input 
+                                type="checkbox"
+                                class="check__input"
+                                > ES2015/ES2016
+                            <span class="check__mark"></span>
+                        </label>
+
+                        <label class="check">
+                            <input 
+                                type="checkbox"
+                                class="check__input"
+                                > Gulp/GRUNT
+                            <span class="check__mark"></span>
+                        </label>
+                    </div>
+
+                    <div class="checks__col">
+                        <label class="check">
+                            <input 
+                                type="checkbox"
+                                class="check__input"
+                                > Webpack
+                            <span class="check__mark"></span>
+                        </label>
+
+                        <label class="check">
+                            <input 
+                                type="checkbox"
+                                class="check__input"
+                                > jQuery
+                            <span class="check__mark"></span>
+                        </label>
+
+                        <label class="check">
+                            <input 
+                                type="checkbox"
+                                class="check__input"
+                                > Ипользую Git
                             <span class="check__mark"></span>
                         </label>
                     </div>
@@ -101,30 +175,39 @@
         </section>  
 
         <section class="section">
-            <i class="js-icon section__icon"></i>
-            <h2 class="h2 section__title">Уровень владения Javascript</h2>
+            <div class="section__top">
+                <i class="icon-js section__icon"></i>
+                <h2 class="h2 section__title">Уровень владения Javascript</h2>
+            </div>
             <div class="section__content">
-                
+               <div id="slider"></div>
             </div>
         </section>  
 
         <section class="section">
-            <i class="js-icon section__icon"></i>
-            <h2 class="h2 section__title">Расскажите о себе</h2>
-            <div class="section__content">
+            <div class="section__top">
+                <i class="icon-about section__icon"></i>
+                <h2 class="h2 section__title">Расскажите о себе</h2>
                 <div class="section__text">
-
+                    Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
                 </div>
+            </div>
+            <div class="section__content">
 
-                <textarea 
+                <div class="form-row">
+                    <textarea 
                     class="textarea"
                     placeholder="Понравилась тем, что..."
                     ></textarea>
-                    
-                <button class="btn">Сохранить</button>
+                </div>
+
+                <div class="form-row tac">
+                    <button class="btn">Сохранить</button>
+                </div>
+                
         </section>  
     </div>
     
-    
+    <script src="./js/app.js"></script>
 </body>
 </html>
